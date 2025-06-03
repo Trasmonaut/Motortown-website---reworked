@@ -283,7 +283,7 @@ h5 {
     background-color: #e9e9e9;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 75vh;
+    height: auto;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -417,3 +417,12 @@ h5 {
 
 }
 
+#motorTownCarousel {
+height: 45vh;
+
+}
+
+.carousel .carousel-item img {
+   
+object-fit: cover; /* Ensures the image covers the entire carousel item */  
+}

@@ -10,11 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous"referrerpolicy="no-referrer">
-
     <script src="scripts.js"></script>
 
-
-    
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
     
@@ -107,7 +104,22 @@
        
             
         </div>
+ 
+    <!-- Community Showcase Section -->
+    <p class="Community-title" style="text-align: center;">Community Showcase</p>
+    <div class="container">
+      <div class="carousel carousel-slider center" id="motorTownCarousel" style="min-height:320px;">
+          <a class="carousel-item" href="#one!"><img src="assets/showcase/1.png"></a>
+          <a class="carousel-item" href="#two!"><img src="assets/showcase/2.png"></a>
+          <a class="carousel-item" href="#three!"><img src="assets/showcase/3.png"></a>
+            <a class="carousel-item" href="#four!"><img src="assets/showcase/4.png"></a>
+      </div>
     </div>
+
+    
+    </div>
+  
+
 
     <!-- P3 Games Section-->
     <div class="p3-games-section" id = "p3games">
@@ -206,5 +218,22 @@
             
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+      fullWidth: true,
+      indicators: true
+    });
+
+    // Auto-slide every 4 seconds
+    setInterval(function () {
+      instances.forEach(carousel => {
+        carousel.next();
+      });
+    }, 4000);
+  });
+</script>
+
 </body>
 </html>
