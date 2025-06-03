@@ -91,13 +91,11 @@ nav {
 }
 
 .main-title {
-
     font-family: 'Montserrat', sans-serif;
     font-size: 5em;
     font-weight: bold;
     color: white;
     text-shadow: #cccccc;
-   
 
 }
 .banner .bottom-banner {
@@ -182,7 +180,7 @@ nav {
 
 footer{
     background-color: #111526;
-    height: 250px;
+    height: auto;
     
 }
 
@@ -218,67 +216,6 @@ h5 {
 }
 
 
-.wishlist-section {
-    background-image: url('assets/main/wishlist.png'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    text-align: top;
-    color: white;
-    position: relative;
- 
-    padding: 20px; /* Add some padding for better spacing */
-}
-
-.wishlist-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.50); /* Black with 35% transparency */
-    z-index: 1;
-    
-}
-.wishlist-section p, .wishlist-section a {
-    z-index: 2; /* Ensure text appears above the overlay */
-    position: relative;
-}
-
-.wishlist-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4em;
-    font-weight: bold;
-    color: white;
-    text-shadow: #cccccc;
-    text-align: center;
-   
-
-}
-
-.wishlist-section .wishlist-subtitle {
-    color: white;
-    text-align: center;
-  
-    text-shadow: #cccccc;
-    font-family: 'Manrope', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.wishlist-button {
-    display: inline-block;
-    margin: 0 auto;
-    width: auto;
-}
-
-.wishlist-section .container {
-    text-align: center;
-}
-
 .Community{
     background-color: #e9e9e9;
     padding-top: 20px;
@@ -287,6 +224,7 @@ h5 {
     justify-content: center;
     display: flex;
     flex-direction: column;
+
 
     
   
@@ -297,7 +235,7 @@ h5 {
     font-size: 3em;
     font-weight: bolder;
     color: #111526;
-    transform: translateX(+20px);
+    transform: translateX(+50px);
 
 }
 
@@ -315,7 +253,7 @@ h5 {
     color: #111526;
     font-family: 'Manrope', sans-serif;
     font-size: 1.2em;
-    transform: translateX(+20px);
+    transform: translateX(+50px);
 }
 
 .community-button {
@@ -327,7 +265,7 @@ h5 {
     font-family: 'Manrope', sans-serif;
     border-radius: 10px;
     font-weight: bold;
-    transform: translateX(+20px);
+     transform: translateX(+50px);
     text-decoration: none; /* Remove underline from link */
 
 }
@@ -348,7 +286,7 @@ h5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     transform: translateX(+30px);
+    transform: translateX(+50px);
     
 }
 
@@ -369,9 +307,6 @@ h5 {
     justify-content: center;
     display: flex;
     flex-direction: column;
-
-    
-  
 }
 
 .demo-section .demo-title{
@@ -380,7 +315,6 @@ h5 {
     font-weight: bolder;
     color: #111526;
     transform: translateX(+20px);
-
 }
 
 .demo-section .demo-image {
@@ -388,9 +322,6 @@ h5 {
     height: 100%;
     position: relative;
     display:flex;
-   
-    
-   
 }
 
 .demo-section .demo-description {
@@ -423,6 +354,84 @@ height: 45vh;
 }
 
 .carousel .carousel-item img {
-   
-object-fit: cover; /* Ensures the image covers the entire carousel item */  
+    object-fit: cover; /* Ensures the image covers the entire carousel item */  
+}
+
+.features-section {
+    background-color: #111526;
+    
+    padding-bottom: 50px;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: white
+
+}
+
+
+.wishlist-section {
+    background-image: url('assets/main/wishlist.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    text-align: top;
+    color: white;
+    position: relative;
+
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.wishlist-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50); /* Black with 35% transparency */
+    z-index: 1;
+
+}
+.wishlist-section p, .wishlist-section a {
+    z-index: 2; /* Ensure text appears above the overlay */
+    position: relative;
+}
+
+.wishlist-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    text-shadow: #cccccc;
+    text-align: center;
+}
+
+.wishlist-section .wishlist-subtitle {
+    color: white;
+    text-align: center;
+
+    text-shadow: #cccccc;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 50px;
+}
+
+.wishlist-button {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+}
+
+.wishlist-section .container {
+    text-align: center;
 }

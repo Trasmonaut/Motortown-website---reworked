@@ -33,7 +33,7 @@
                 <ul id="nav-mobile">
                     <li><a href="#banner">Home</a></li>
                     <li><a href="#0.7.14">0.7.14</a></li>
-                    <li><a href="collapsible.html">Features</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#Community">Community Hub</a></li>
                     <li><a href="#p3games">P3 Games</a></li>
                     <li><a href="#demo">Try Demo</a></li>
@@ -83,6 +83,24 @@
         </div>
     </div>
 
+        <!-- Feature Section -->
+    <div class="features-section" id = "features">
+        <p class = "feature-title" style="text-align: center; ">FEATURES</p>
+        <div class="container">
+        <div class="carousel carousel-slider center" id="motorTownCarousel" style="min-height:320px;">
+            <a class="carousel-item" href="#one!"><img src="assets\features\1.png"></a>
+            <a class="carousel-item" href="#two!"><img src="assets\features\2.png"></a>
+            <a class="carousel-item" href="#two!"><img src="assets\features\3.png"></a>
+            <a class="carousel-item" href="#four!"><img src="assets\features\4.png"></a>
+            <a class="carousel-item" href="#five!"><img src="assets\features\5.png"></a>
+            <a class="carousel-item" href="#six!"><img src="assets\features\6.png"></a>
+            <a class="carousel-item" href="#seven!"><img src="assets\features\7.png"></a>
+
+
+        </div>
+        </div>
+    </div>
+
     <!-- Community Hub Section-->
    <div id = "Community" class = "Community">
         <div class="row">
@@ -92,6 +110,7 @@
                 <div class="community-buttons-group">
                     <a href="https://discord.gg/vXcrU9Ptcf" class="btn-large community-button"><i class="fab fa-discord fa-fw"></i>  Discord</a>
                     <a href="https://www.reddit.com/r/MotorTown/" class="btn-large community-button"><i class="fab fa-reddit fa-fw"></i>  Reddit</a>
+                    <a href="https://www.youtube.com/@MotorTownHub" class="btn-large community-button"><i class="fab fa-youtube fa-fw"></i>  MotorTown Hub </a>
                 </div>
                 <div class="community-buttons-group" style="margin-top: 16px;">
                     <a href="https://steamcommunity.com/app/1369670" class="btn-large community-button" ><i class="fab fa-steam fa-fw"></i>  Steam Community</a>
@@ -109,10 +128,22 @@
     <p class="Community-title" style="text-align: center;">Community Showcase</p>
     <div class="container">
       <div class="carousel carousel-slider center" id="motorTownCarousel" style="min-height:320px;">
-          <a class="carousel-item" href="#one!"><img src="assets/showcase/1.png"></a>
-          <a class="carousel-item" href="#two!"><img src="assets/showcase/2.png"></a>
-          <a class="carousel-item" href="#three!"><img src="assets/showcase/3.png"></a>
+             <a class="carousel-item" href="#one!"><img src="assets/showcase/1.png"></a>
+            <a class="carousel-item" href="#two!"><img src="assets/showcase/2.png"></a>
+            <a class="carousel-item" href="#three!"><img src="assets/showcase/3.png"></a>
             <a class="carousel-item" href="#four!"><img src="assets/showcase/4.png"></a>
+            <a class="carousel-item" href="#five!"><img src="assets/showcase/5.png"></a>
+            <a class="carousel-item" href="#six!"><img src="assets/showcase/6.png"></a>
+            <a class="carousel-item" href="#seven!"><img src="assets/showcase/7.png"></a>
+            <a class="carousel-item" href="#eight!"><img src="assets/showcase/8.png"></a>
+            <a class="carousel-item" href="#nine!"><img src="assets/showcase/9.png"></a>
+            <a class="carousel-item" href="#ten!"><img src="assets/showcase/10.png"></a>
+            <a class="carousel-item" href="#eleven!"><img src="assets/showcase/11.png"></a>
+            <a class="carousel-item" href="#twelve!"><img src="assets/showcase/12.png"></a>
+            <a class="carousel-item" href="#thirteen!"><img src="assets/showcase/13.png"></a>
+            <a class="carousel-item" href="#fourteen!"><img src="assets/showcase/14.png"></a>
+            <a class="carousel-item" href="#fifteen!"><img src="assets/showcase/15.png"></a>
+            <a class="carousel-item" href="#sixteen!"><img src="assets/showcase/16.png"></a>
       </div>
     </div>
 
@@ -200,6 +231,13 @@
                     <h5>MotorTown- Behind The Wheel</h5>
                
                     <p class="subtitle">P3 Games</p>
+
+                    <ul >
+                        <li><a href="assets\presskit.zip" download="proposed_file_name" style = "color: white;">Press Kit</a></li>
+                        <li><a href="https://trello.com/b/habAtUDJ/motor-town" target="_blank" style = "color: white;">Trello Board</a></li>
+                        <li><a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" target="_blank"style = "color: white;" > Steam Page</a></li>
+
+                    </ul>
                 </div>
 
                 <div class="col s6 m6">
@@ -226,12 +264,12 @@
       indicators: true
     });
 
-    // Auto-slide every 4 seconds
+    // Auto-slide every 8 seconds
     setInterval(function () {
       instances.forEach(carousel => {
         carousel.next();
       });
-    }, 4000);
+    }, 8000);
   });
 </script>
 
