@@ -221,7 +221,7 @@ h5 {
     font-size: 3em;
     font-weight: bolder;
     color: #111526;
-    transform: translateX(50px);
+    transform: translateX(30px);
 
 }
 
@@ -236,7 +236,7 @@ h5 {
 
 .Community .Community-description {
     font-size: 1.2em;
-    transform: translateX(50px);
+    transform: translateX(30px);
 }
 
 .community-button {
@@ -247,7 +247,7 @@ h5 {
     font-family: 'Manrope', sans-serif;
     border-radius: 10px;
     font-weight: bold;
-    transform: translateX(50px);
+    transform: translateX(30px);
     text-decoration: none; /* Remove underline from link */
 
 }
