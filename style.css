@@ -1,7 +1,12 @@
+/* ========== BASE STYLES ========== */
 body {
-    width: 100%;
-    overflow-y: scroll;
+    width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background: #fff;
 }
 
 nav {
@@ -18,7 +23,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
 }
 
 /* Logo alignment */
@@ -38,12 +42,10 @@ nav {
 #nav-mobile {
     display: flex;
     align-items: center;
-    overflow-y: hidden; /* Hide overflow for mobile */
     margin-left: auto; /* Push to the right in flex */
 }
 
 #nav-mobile li {
-   
     list-style: none;
     display: flex;
     align-items: center;
@@ -60,6 +62,7 @@ nav {
 .sidenav {
     background-color: white;
     color: #111526;
+  
 }
 
 .banner {
@@ -71,9 +74,6 @@ nav {
 
     display: flex;
     flex-direction: column;
-    text-align: top;
-   
-
     color: white;
     position: relative;
 }
@@ -113,17 +113,14 @@ nav {
 }
 
 .mission-statement {
-    font-family: 'Manrope', sans-serif;
     font-size: 1.2em;
     text-align: center;
 }
 .mission-statement-small {
-    font-family: 'Manrope', sans-serif;
     font-size: 1em;
 
 }
 .banner .link{
-    font-family: 'Manrope', sans-serif;
     font-size: 1em;
     font-weight: bold;
     color: white;
@@ -147,12 +144,12 @@ nav {
 .col {
    padding :0px !important;
    padding-right: 20px !important;
+   box-sizing: border-box;
 }
 
 .version{
     background-color: #111526;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
   
 }
 
@@ -175,22 +172,20 @@ nav {
 
 .version .version-description {
     color: white;
-    font-family: 'Manrope', sans-serif;
     font-size: 1.2em;
 }
 
 
 
-footer{
+footer, .page-footer{
     background-color: #111526;
+    color: white;
     height: auto;
-    
 }
 
 .footer-logo {
-    width: 300px; /* Adjust as needed */
+    width: 200px; /* Adjust as needed */
     height: auto;
-    align-items: end;
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -204,12 +199,6 @@ h5 {
 }
 
 
-.page-footer{
-    background-color: #111526;
-    color: white;
-
-}
-
 .buttons .fa-brands,
 .btn-large .fa-brands,
 .btn-large .fab {
@@ -221,16 +210,10 @@ h5 {
 
 .Community{
     background-color: #e9e9e9;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: auto;
-    justify-content: center;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-
-
-    
-  
+    color: #111526;
 }
 
 .Community .Community-title{
@@ -238,76 +221,61 @@ h5 {
     font-size: 3em;
     font-weight: bolder;
     color: #111526;
-    transform: translateX(+50px);
+    transform: translateX(50px);
 
 }
 
 .Community .Community-image {
     width: 100%;
     height: 100%;
-    position: relative;
-    display:flex;
-    transform: translateX(+20px);
+    display: flex;
+    transform: translateX(20px);
     
    
 }
 
 .Community .Community-description {
-    color: #111526;
-    font-family: 'Manrope', sans-serif;
     font-size: 1.2em;
-    transform: translateX(+50px);
+    transform: translateX(50px);
 }
 
 .community-button {
     display: inline-block;
     margin: 0 auto;
-    width: auto;
     background-color: #111526 !important;
     color: white !important;
     font-family: 'Manrope', sans-serif;
     border-radius: 10px;
     font-weight: bold;
-     transform: translateX(+50px);
+    transform: translateX(50px);
     text-decoration: none; /* Remove underline from link */
 
 }
 
 .p3-games-section {
     background-color: #111526;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    height: 75vh;
-    justify-content: center;
+    padding: 10px 0 30px 0;
     display: flex;
     flex-direction: column;
     color: white;
 }
 
-.p3-games-section .p3story{
-    align-items: center;    
+.p3-games-section .p3story,
+.p3-games-section .p3team {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(+50px);
-    
 }
 
-.p3-games-section .p3team{
-    align-items: center;    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
- 
+.p3-games-section .p3story {
+    transform: translateX(50px);
 }
-
 
 .demo-section{
     background-color: #e9e9e9;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 75vh;
-    justify-content: center;
+    padding: 20px 0;
+    height: 60vh;
     display: flex;
     flex-direction: column;
 }
@@ -317,36 +285,31 @@ h5 {
     font-size: 3em;
     font-weight: bolder;
     color: #111526;
-    transform: translateX(+20px);
+    transform: translateX(20px);
 }
 
 .demo-section .demo-image {
     width: 100%;
     height: 100%;
-    position: relative;
-    display:flex;
+    display: flex;
 }
 
 .demo-section .demo-description {
     color: #111526;
-    font-family: 'Manrope', sans-serif;
     font-size: 1.2em;
-    transform: translateX(+20px);
+    transform: translateX(20px);
     padding-bottom: 100px;
 }
 
 .demo-button {
     display: inline-block;
     margin: 0 auto;
-    width: auto;
-    
     background-color: #111526 !important;
     color: white !important;
     font-family: 'Manrope', sans-serif;
     border-radius: 10px;
     font-weight: bold;
-    transform: translateX(+20px);
-    justify-content: right;
+    transform: translateX(20px);
     text-decoration: none; /* Remove underline from link */
 
 }
@@ -364,8 +327,6 @@ height: 45vh;
     background-color: #111526;
     
     padding-bottom: 50px;
-    height: auto;
-    justify-content: center;
     display: flex;
     flex-direction: column;
 }
@@ -383,13 +344,10 @@ height: 45vh;
     background-image: url('assets/main/wishlist.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
-    height: 85vh;
     display: flex;
     flex-direction: column;
-    text-align: top;
     color: white;
     position: relative;
-
     padding: 20px; /* Add some padding for better spacing */
 }
 
@@ -432,7 +390,6 @@ height: 45vh;
 .wishlist-button {
     display: inline-block;
     margin: 0 auto;
-    width: auto;
 }
 
 .wishlist-section .container {
@@ -440,8 +397,246 @@ height: 45vh;
 }
 
 .nav-wishlist-button {
-   border-color: #111526 ; 
+   border-color: #111526 !important ; 
    background-color: white;
    color: #ffcc00 !important;
+    border-width: 2rem !important;
+    border-radius: 5px !important;
 
+}
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .container, .row {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box !important;
+  }
+  .col, .col.s6, .col.s12, .col.m6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Section backgrounds full width, content padded */
+  .features-section,
+  .wishlist-section,
+  .demo-section,
+  .version,
+  .Community,
+  .p3-games-section {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+   
+  }
+
+  .p3-games-section .p3story,
+  .p3-games-section .p3team {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+ transform: translateX(0) !important;
+  }
+
+  /* Banner Section */
+  .banner .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .banner .subtitle {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .banner .bottom-banner {
+    padding: 0 8px;
+  }
+
+  /* Demo Section */
+  .demo-section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+  .demo-section .col.s6 {
+    margin: 0 0 16px 0;
+    height: auto !important;
+  }
+  .demo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+  }
+  .demo-title, .demo-description {
+    text-align: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    word-break: break-word;
+    font-size: 1.2em;
+    transform: none !important;
+  }
+  .demo-button {
+    .demo-button {
+    display: block !important;
+    width: 100% !important;
+    margin: 12px 0 8px 0 !important;
+    text-align: center !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* Community Section */
+  #Community .row,
+  .p3-games-section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Community .col.s6,
+  .p3-games-section .col.s6 {
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+  .Community-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .Community-title,
+  .Community-description {
+    text-align: center !important;
+    transform: none !important;
+    margin-bottom: 12px;
+  }
+  .community-buttons-group {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .community-button {
+    width: 100%;
+    margin-bottom: 8px;
+    transform: none !important;
+  }
+
+  /* Feature Section */
+  .features-section {
+    padding: 16px 0;
+    height: auto;
+  }
+  .feature-title {
+    font-size: 2em !important;
+    text-align: center !important;
+    margin-bottom: 16px;
+  }
+  #motorTownCarousel {
+    min-height: 180px !important;
+    height: 30vh !important;
+  }
+  .carousel .carousel-item img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  /* Version Section */
+  .version .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .version .col.s6 {
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+  .version .version-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .version-title, 
+  .version-description {
+    text-align: center !important;
+    margin-bottom: 12px;
+  }
+  .btn-large {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* Footer Logo */
+  .footer-logo {
+    width: 100px !important;
+    max-width: 80vw;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* Wishlist Section */
+  .wishlist-title {
+    font-size: 2em !important;
+    text-align: center !important;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+  .wishlist-subtitle {
+    font-size: 1em !important;
+    margin-bottom: 16px;
+    text-align: center !important;
+    word-break: break-word;
+  }
+  .wishlist-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .wishlist-section .container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    box-sizing: border-box;
+  }
+}
 }
