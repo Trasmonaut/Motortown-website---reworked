@@ -36,10 +36,9 @@ nav {
 
 /* Right-aligned nav links */
 #nav-mobile {
-     
     display: flex;
     align-items: center;
-
+    overflow-y: hidden; /* Hide overflow for mobile */
     margin-left: auto; /* Push to the right in flex */
 }
 
@@ -58,6 +57,10 @@ nav {
     font-size: 18px;   
 }
 
+.sidenav {
+    background-color: white;
+    color: #111526;
+}
 
 .banner {
     background-image: url('assets/main/banner.png'); /* Replace with your image path */
@@ -92,7 +95,7 @@ nav {
 
 .main-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 5em;
+    font-size: 5rem;
     font-weight: bold;
     color: white;
     text-shadow: #cccccc;
@@ -434,4 +437,11 @@ height: 45vh;
 
 .wishlist-section .container {
     text-align: center;
+}
+
+.nav-wishlist-button {
+   border-color: #111526 ; 
+   background-color: white;
+   color: #ffcc00 !important;
+
 }

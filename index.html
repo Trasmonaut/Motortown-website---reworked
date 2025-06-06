@@ -28,20 +28,34 @@
                 <a href="#" class="brand-logo">
                     <img src="assets/main/Logo.png" alt="Motortown : Behind the Wheel">
                 </a>
-
+            <!-- Sidenav trigger for mobile -->
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right">
+                    <i class="material-icons">menu</i>
+                </a>
+            
             <!-- Links on the right -->
-                <ul id="nav-mobile">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#banner">Home</a></li>
                     <li><a href="#0.7.14">0.7.14</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#Community">Community Hub</a></li>
                     <li><a href="#p3games">P3 Games</a></li>
                     <li><a href="#demo">Try Demo</a></li>
-                    <li><a href="#wishlist" style = "background-color: white;color: #111526; border-radius: 5px;">Play MotorTown</a></li>
+                    <li><a href="#wishlist" style="background-color: white; color: #111526; border-radius: 5px; border: 2px solid #111526;">Play MotorTown</a></li>
                 </ul>
             </div>
         </nav>
     </div>
+
+    <ul class="sidenav" id="mobile-nav">
+    <li><a href="#banner">Home</a></li>
+    <li><a href="#0.7.14">0.7.14</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#Community">Community Hub</a></li>
+    <li><a href="#p3games">P3 Games</a></li>
+    <li><a href="#demo">Try Demo</a></li>
+    <li><a href="#wishlist" class = "nav-wishlist-button ">Play MotorTown</a></li>
+    </ul>
 
     <!-- Banner Section -->
     <div id="banner" class = "banner">
@@ -263,6 +277,9 @@
       fullWidth: true,
       indicators: true
     });
+
+    var sidenavElems = document.querySelectorAll('.sidenav');
+     M.Sidenav.init(sidenavElems);
 
     // Auto-slide every 8 seconds
     setInterval(function () {
