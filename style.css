@@ -43,7 +43,10 @@ nav {
     display: flex;
     align-items: center;
     margin-left: auto; /* Push to the right in flex */
+
+    
 }
+
 
 #nav-mobile li {
     list-style: none;
@@ -175,7 +178,34 @@ nav {
     font-size: 1.2em;
 }
 
+.faq-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #111526;
 
+    margin-bottom: 20px;
+}
+
+.faq-gray{
+    background-color: #e9e9e9;
+    color: #111526;
+}
+
+.faq-text {
+    font-size: 1.8em;
+    color: #111526;
+    margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+
+.faq-answer {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2em;
+    color: #111526;
+    margin-bottom: 20px;
+}
 
 footer, .page-footer{
     background-color: #111526;
@@ -390,6 +420,7 @@ height: 45vh;
 .wishlist-button {
     display: inline-block;
     margin: 0 auto;
+    width: auto;
 }
 
 .wishlist-section .container {
