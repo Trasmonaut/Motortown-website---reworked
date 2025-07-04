@@ -9,6 +9,10 @@ body {
     background: #fff;
 }
 
+.section-offset {
+  scroll-margin-top: 80px; /* Adjust to your navbar height */
+}
+
 nav {
     background-color: #111526;
     padding: 0 20px;
@@ -357,7 +361,7 @@ height: 45vh;
 .features-section {
     background-color: #111526;
     
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
 }
