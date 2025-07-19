@@ -248,6 +248,7 @@ h5 {
     display: flex;
     flex-direction: column;
     color: #111526;
+    height: fit-content;
 }
 
 .Community .Community-title{
@@ -355,12 +356,14 @@ height: 45vh;
 }
 
 .carousel .carousel-item img {
-    object-fit: cover; /* Ensures the image covers the entire carousel item */  
+  height: auto;         /* Set your desired height */
+  width: 100%;           /* Make images fill the carousel item */
+  object-fit: cover;     /* Prevent images from being stretched or cut off */
+  display: block;
 }
 
 .features-section {
     background-color: #111526;
-    
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
