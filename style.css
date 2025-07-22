@@ -215,6 +215,7 @@ footer, .page-footer{
     background-color: #111526;
     color: white;
     height: auto;
+    padding: 20px 0;
 }
 
 .footer-logo {
@@ -300,6 +301,42 @@ h5 {
     text-decoration: none; /* Remove underline from link */
 
 }
+
+.preloader-wrapper {
+    display: flex;
+   
+
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111526; /* Dark background for preloader */
+    z-index: 9999; /* Ensure it covers everything */
+    pointer-events: none; /* Prevent interaction with preloader */  
+    
+}
+
+.preloader-logo {
+    width: 50%; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    margin-bottom: 20px; /* Space between logo and text */
+}
+.preloader-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: white; /* Text color for preloader */
+    text-align: center; /* Center the text */
+}
+
+
+
 
 .p3-games-section {
     background-color: #111526;

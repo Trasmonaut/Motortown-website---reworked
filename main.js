@@ -15,3 +15,24 @@ window.addEventListener("load", function () {
         });
     }, 8000);
 });
+
+//Preloader functionality
+window.addEventListener("load", function () {
+    var preloader = document.querySelector(".preloader-wrapper");
+    if (preloader) {
+        preloader.style.display = "none";
+    }
+
+
+}   );
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
