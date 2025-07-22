@@ -1,0 +1,59 @@
+.body{
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header-404{
+   align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.header-404 img{
+    margin-top: 200px;
+    width: 500px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and text */
+}
+
+.container-404 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    font-weight: bolder;
+    color: #111526;
+
+    text-transform: uppercase;
+}
+
+.error-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5em;
+    color: #111526;
+
+    margin-top: 20px;
+}
+
+.error-button{
+    background-color: #111526;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
