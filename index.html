@@ -1,332 +1,312 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <!-- Metadata -->
-<meta charset="UTF-8" />
-<title>MotorTown: Behind the Wheel</title>
-<meta name="description" content="Motor Town: Behind The Wheel" />
-<meta name="author" content="P3 Games" />
-<meta name="keywords" content="MotorTown, Motor Town: Behind The Wheel" />
-<meta name="theme-color" content="#111526" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <title>MotorTown: Behind the Wheel</title>
+  <meta name="description" content="Motor Town: Behind The Wheel" />
+  <meta name="author" content="P3 Games" />
+  <meta name="keywords" content="MotorTown, Motor Town: Behind The Wheel" />
+  <meta name="theme-color" content="#111526" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Favicon -->
-<link rel="icon" href="assets/main/Icon.png" type="image/x-icon" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/main/Icon.png" type="image/x-icon" />
 
-<!-- Fonts (Load early) -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Fonts (Load early, display swap for speed) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Icons (Font Awesome, defer loading) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- Frameworks -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!-- Frameworks (Materialize) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-<!-- Custom Styles -->
-<link rel="stylesheet" href="style.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
 
-
-
+  <!-- Section offset for smooth scroll (inline for speed) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .section-offset {
+      scroll-margin-top: 70px; /* Adjust to navbar height */
+    }
+    /* Optimize images */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* Remove outline from buttons on click for aesthetics */
+    .btn-large:focus, .btn-large:active {
+      outline: none;
+      box-shadow: none;
+    }
+    /* Responsive footer logo */
+    .footer-logo {
+      max-width: 180px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Preloader -->
-    <div class="preloader-wrapper">
-        <div class="span">
-            <img src="assets/main/Logo.png" alt="MotorTown Logo" class="preloader-logo">
-            <h1 class="preloader-text">Loading...</h1>
-        </div>
-        
+  <!-- Preloader (Consider removing for speed, or hide after load with JS) -->
+  <div class="preloader-wrapper" aria-hidden="true">
+    <div class="span">
+      <img src="assets/main/Logo.png" alt="MotorTown Logo" class="preloader-logo" loading="lazy">
+      <h1 class="preloader-text">Loading...</h1>
     </div>
+  </div>
 
+  <!-- Navigation Bar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" aria-label="Home">
+          <img src="assets/main/Logo.png" alt="Motortown : Behind the Wheel" loading="lazy">
+        </a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger right" aria-label="Open menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#banner">Home</a></li>
+          <li><a href="#v0715">0.7.15</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#Community">Community Hub</a></li>
+          <li><a href="#p3games">P3 Games</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#demo">Try Demo</a></li>
+          <li><a href="#wishlist" style="background-color: white; color: #111526; border-radius: 5px; border: 2px solid #111526;">Play MotorTown</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#banner">Home</a></li>
+    <li><a href="#v0715">0.7.15</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#Community">Community Hub</a></li>
+    <li><a href="#p3games">P3 Games</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#demo">Try Demo</a></li>
+    <li><a href="#wishlist" style="background-color: white; color: #111526; border-radius: 5px; border: 2px solid #111526;">Play MotorTown</a></li>
+  </ul>
 
-    <!-- Navigation Bar -->
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-            <!-- Logo on the left -->
-                <a href="#" class="brand-logo">
-                    <img src="assets/main/Logo.png" alt="Motortown : Behind the Wheel">
-                </a>
-            <!-- Sidenav trigger for mobile -->
-                <a href="#" data-target="mobile-nav" class="sidenav-trigger right">
-                    <i class="material-icons">menu</i>
-                </a>
-            
-            <!-- Links on the right -->
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#v0715">0.7.15</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#Community">Community Hub</a></li>
-                    <li><a href="#p3games">P3 Games</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#demo">Try Demo</a></li>
-                    <li><a href="#wishlist" style="background-color: white; color: #111526; border-radius: 5px; border: 2px solid #111526;">Play MotorTown</a></li>
-                </ul>
-            </div>
-        </nav>
+  <!-- Banner Section -->
+  <div id="banner" class="banner center-align section-offset">
+
+    <div class="banner-content">
+      <img src="assets/main/logo.png" alt="MotorTown Banner Image" class="banner-image" loading="lazy">
+
+      </div>
+      <div class="bottom-banner">
+        <p class="subtitle">A driving simulator that puts you in the driver's seat of a living, breathing world. Experience the thrill of driving in a dynamic environment with realistic physics and immersive gameplay.</p>
+        <p class="subtitle">Explore a vast open world, complete missions, and build your own automotive empire.</p>
+        <p class="subtitle" style="color: #ffcc00;">Available on Steam Early Access</p>
+        <div class="buttons">
+          <a href="https://www.youtube.com/watch?v=j4JUOkxSGww" class="btn-large" target="_blank" rel="noopener">
+            <i class="fa-brands fa-youtube fa-fw"></i> Watch Trailer  
+          </a>
+          <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large" target="_blank" rel="noopener">
+            <i class="fa-brands fa-steam fa-fw custom-icon"></i> Buy Now
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="#banner">Home</a></li>
-        <li><a href="#v0715">0.7.15</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#Community">Community Hub</a></li>
-        <li><a href="#p3games">P3 Games</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#demo">Try Demo</a></li>
-       <li><a href="#wishlist" style="background-color: white; color: #111526; border-radius: 5px; border: 2px solid #111526;">Play MotorTown</a></li>
-                    
-    </ul>
-
-
-
-    <!-- Banner Section -->
-    <div id="banner" class = "banner section-offset">
-        <div class="row">
-           <p class = "main-title">MotorTown: Behind The Wheel</p>
-
-            <div class = "bottom-banner">
-                <p class = "subtitle">A driving simulator that puts you in the driver's seat of a living, breathing world.</p>
-                <p class = "subtitle">Experience the thrill of driving in a dynamic environment with realistic physics and immersive gameplay.</p>      
-                <p class = "subtitle">Explore a vast open world, complete missions, and build your own automotive empire.</p>
-                <p class = "subtitle" style = "color: #ffcc00;">Available on Steam Early Access</p>
-            
-                <div class="buttons">
-                    <a href="https://www.youtube.com/watch?v=j4JUOkxSGww&embeds_referring_euri=https%3A%2F%2Fmotor-town.com%2F&source_ve_path=MjM4NTE" class="btn-large">
-                        <i class="fa-brands fa-youtube fa-fw" ></i> Watch Trailer  
-                    </a>
-
-                    <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large">
-                        <i class="fa-brands fa-steam fa-fw custom-icon"></i> Buy Now
-                    </a>
-                </div>
-            </div>
-        </div>
+  <!-- Version Section -->
+  <div id="v0715" class="version section-offset">
+    <div class="row">
+      <div class="col s6">
+        <img src="assets/main/0.7.15promo.png" alt="0.7.15 promo image" class="version-image" loading="lazy">
+      </div>
+      <div class="col s6">
+        <h2 class="version-title">VERSION 0.7.15 - Ambulance and Trailer Update</h2>
+        <p class="version-description">Version 0.7.15 has been released! Try out the new B-Double Trailers, Ambulance reworks, Search and Rescue missions, and much more. View the full changelog on our Trello Board!</p>
+        <a href="https://trello.com/b/habAtUDJ/motor-town" class="btn-large" target="_blank" rel="noopener"><i class="fab fa-trello fa-fw"></i> Trello Board</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Version Section -->
-
-    <div id = "v0715" class = "version section-offset">
-        <div class="row">
-            <div class="col s6">
-                <img src="assets/main/0.7.15promo.png" alt="0.7.15 promo image" class="version-image">
-            </div>
-       
-            <div class="col s6">
-                <h2 class="version-title">VERSION 0.7.15 - cartrucklimoambulancerescuepaint</h2>
-                <p class="version-description">0.7.15 is being developed!  View the full changelog on our Trello Board!</p>
-                <a href="https://trello.com/b/habAtUDJ/motor-town" class=" btn-large"><i class="fab fa-trello fa-fw"></i>  Trello Board</a>
-            </div>
-        </div>
-    </div>
-
-        <!-- Feature Section -->
-    <div class="features-section section-offset" id = "features"  style="min-height: fit-content;">
-        <p class = "feature-title" style="text-align: center;">FEATURES</p>
-        <div class="container">
-        <div class="carousel carousel-slider center" id="motorTownCarousel">
-            <a class="carousel-item" href="#one!"><img src="assets\features\1.png"></a>
-            <a class="carousel-item" href="#two!"><img src="assets\features\2.png"></a>
-            <a class="carousel-item" href="#two!"><img src="assets\features\3.png"></a>
-            <a class="carousel-item" href="#four!"><img src="assets\features\4.png"></a>
-            <a class="carousel-item" href="#five!"><img src="assets\features\5.png"></a>
-            <a class="carousel-item" href="#six!"><img src="assets\features\6.png"></a>
-            <a class="carousel-item" href="#seven!"><img src="assets\features\7.png"></a>
-
-
-        </div>
-        </div>
-    </div>
-
-    <!-- Community Hub Section-->
-   <div id = "Community" class = "Community section-offset">
-        <div class="row">
-            <div class="col s6">
-                <h2 class="Community-title">Join the MotorTown Community</h2>
-                <p class="Community-description">Get behind the wheel, meet drivers, show off your MotorTown moments and embark on journeys together. Stay up to date with the latest information.</p>
-                <div class="community-buttons-group">
-                    <a href="https://discord.gg/vXcrU9Ptcf" class="btn-large community-button"><i class="fab fa-discord fa-fw"></i>  Discord</a>
-                    <a href="https://www.reddit.com/r/MotorTown/" class="btn-large community-button"><i class="fab fa-reddit fa-fw"></i>  Reddit</a>
-                    <a href="https://www.youtube.com/@MotorTownHub" class="btn-large community-button"><i class="fab fa-youtube fa-fw"></i>  MotorTown Hub </a>
-                    <a href="https://steamcommunity.com/app/1369670" class="btn-large community-button" ><i class="fab fa-steam fa-fw"></i>  Steam Community</a>
-                    <a href="https://motortown.info/" class="btn-large community-button"><i class="fa-solid fa-compass"></i>  Unoffical Wiki</a>
-                </div>
-            </div>
-            <div class="col s6">
-                <img src="assets/main/community.png" alt="MWRS Car meet" class="Community-image">
-            </div>
-       
-            
-        </div>
- 
-    <!-- Community Showcase Section -->
-    <p class="Community-title " style="text-align: center;">Community Showcase</p>
+  <!-- Feature Section -->
+  <div id="features" class="features-section section-offset" style="min-height: fit-content;">
+    <p class="feature-title" style="text-align: center;">FEATURES</p>
     <div class="container">
-      <div class="carousel carousel-slider center" id="motorTownCarousel;">
-            <a class="carousel-item" href="#one!"><img src="assets/showcase/1.png"></a>
-            <a class="carousel-item" href="#two!"><img src="assets/showcase/2.png"></a>
-            <a class="carousel-item" href="#three!"><img src="assets/showcase/3.png"></a>
-            <a class="carousel-item" href="#four!"><img src="assets/showcase/4.png"></a>
-            <a class="carousel-item" href="#five!"><img src="assets/showcase/5.png"></a>
-            <a class="carousel-item" href="#six!"><img src="assets/showcase/6.png"></a>
-            <a class="carousel-item" href="#seven!"><img src="assets/showcase/7.png"></a>
-            <a class="carousel-item" href="#eight!"><img src="assets/showcase/8.png"></a>
-            <a class="carousel-item" href="#nine!"><img src="assets/showcase/9.png"></a>
-            <a class="carousel-item" href="#ten!"><img src="assets/showcase/10.png"></a>
-            <a class="carousel-item" href="#eleven!"><img src="assets/showcase/11.png"></a>
-            <a class="carousel-item" href="#twelve!"><img src="assets/showcase/12.png"></a>
-            <a class="carousel-item" href="#thirteen!"><img src="assets/showcase/13.png"></a>
-            <a class="carousel-item" href="#fourteen!"><img src="assets/showcase/14.png"></a>
-            <a class="carousel-item" href="#fifteen!"><img src="assets/showcase/15.png"></a>
-            <a class="carousel-item" href="#sixteen!"><img src="assets/showcase/16.png"></a>
-            <a class="carousel-item" href="#seventeen!"><img src="assets/showcase/17.png"></a>
+      <div class="carousel carousel-slider center" id="motorTownCarousel">
+        <a class="carousel-item" href="#one!"><img src="assets/features/1.png" loading="lazy"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/features/2.png" loading="lazy"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/features/3.png" loading="lazy"></a>
+        <a class="carousel-item" href="#four!"><img src="assets/features/4.png" loading="lazy"></a>
+        <a class="carousel-item" href="#five!"><img src="assets/features/5.png" loading="lazy"></a>
+        <a class="carousel-item" href="#six!"><img src="assets/features/6.png" loading="lazy"></a>
+        <a class="carousel-item" href="#seven!"><img src="assets/features/7.png" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Hub Section -->
+  <div id="Community" class="Community section-offset">
+    <div class="row">
+      <div class="col s6">
+        <h2 class="Community-title">Join the MotorTown Community</h2>
+        <p class="Community-description">Get behind the wheel, meet drivers, show off your MotorTown moments and embark on journeys together. Stay up to date with the latest information.</p>
+        <div class="community-buttons-group">
+          <a href="https://discord.gg/vXcrU9Ptcf" class="btn-large community-button" target="_blank" rel="noopener"><i class="fab fa-discord fa-fw"></i> Discord</a>
+          <a href="https://www.reddit.com/r/MotorTown/" class="btn-large community-button" target="_blank" rel="noopener"><i class="fab fa-reddit fa-fw"></i> Reddit</a>
+          <a href="https://www.youtube.com/@MotorTownHub" class="btn-large community-button" target="_blank" rel="noopener"><i class="fab fa-youtube fa-fw"></i> MotorTown Hub</a>
+          <a href="https://steamcommunity.com/app/1369670" class="btn-large community-button" target="_blank" rel="noopener"><i class="fab fa-steam fa-fw"></i> Steam Community</a>
+          <a href="https://motortown.info/" class="btn-large community-button" target="_blank" rel="noopener"><i class="fa-solid fa-compass"></i> Unofficial Wiki</a>
+        </div>
+      </div>
+      <div class="col s6">
+        <img src="assets/main/community.png" alt="MWRS Car meet" class="Community-image" loading="lazy">
       </div>
     </div>
 
-    
+    <p class="Community-title" style="text-align: center;">Community Showcase</p>
+    <div class="container">
+      <div class="carousel carousel-slider center" id="motorTownShowcaseCarousel">
+        <a class="carousel-item" href="#one!"><img src="assets/showcase/1.png" loading="lazy"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/showcase/2.png" loading="lazy"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/showcase/3.png" loading="lazy"></a>
+        <a class="carousel-item" href="#four!"><img src="assets/showcase/4.png" loading="lazy"></a>
+        <a class="carousel-item" href="#five!"><img src="assets/showcase/5.png" loading="lazy"></a>
+        <a class="carousel-item" href="#six!"><img src="assets/showcase/6.png" loading="lazy"></a>
+        <a class="carousel-item" href="#seven!"><img src="assets/showcase/7.png" loading="lazy"></a>
+        <a class="carousel-item" href="#eight!"><img src="assets/showcase/8.png" loading="lazy"></a>
+        <a class="carousel-item" href="#nine!"><img src="assets/showcase/9.png" loading="lazy"></a>
+        <a class="carousel-item" href="#ten!"><img src="assets/showcase/10.png" loading="lazy"></a>
+        <a class="carousel-item" href="#eleven!"><img src="assets/showcase/11.png" loading="lazy"></a>
+        <a class="carousel-item" href="#twelve!"><img src="assets/showcase/12.png" loading="lazy"></a>
+        <a class="carousel-item" href="#thirteen!"><img src="assets/showcase/13.png" loading="lazy"></a>
+        <a class="carousel-item" href="#fourteen!"><img src="assets/showcase/14.png" loading="lazy"></a>
+        <a class="carousel-item" href="#fifteen!"><img src="assets/showcase/15.png" loading="lazy"></a>
+        <a class="carousel-item" href="#sixteen!"><img src="assets/showcase/16.png" loading="lazy"></a>
+        <a class="carousel-item" href="#seventeen!"><img src="assets/showcase/17.png" loading="lazy"></a>
+      </div>
     </div>
-  
+  </div>
 
-
-    <!-- P3 Games Section-->
-    <div class="p3-games-section section-offset" id = "p3games">
-        <div class = "row">
-            <p class = "wishlist-title">P3 Games</p>
-            <div class="col s6">
-                <div class = "p3story">
-                    <h2 class = "subtitle ">Our Story</h2>
-                    <p class = "mission-statement">"Hello, I'm MrHwang from South Korea. I love driving games so much that I started to make my own game back in 2002 but failed to finish it. So I joined a game company and worked there for 14 years to learn how to make a game. And in summer 2020, I finally quit the job and start to make my dream game again." - Mr Hwang</p>
-                    <p class = "mission-statement-small">MotorTown: Behind The Wheel is a passion project by P3 Games, a small indie game studio based in South Korea. Founded by MrHwang, the team is dedicated to creating an immersive driving experience that combines realistic physics with a vibrant open world.</p>
-                    <p class = "mission-statement-small" >With a focus on community feedback and continuous improvement, P3 Games aims to deliver a game that not only meets but exceeds player expectations.</p>
-                
-                </div>
-            </div>
-            <div class="col s6 p3team">
-                <div class = "p3team">
-                    <h2 class = "subtitle">Current Team Members:</h2>
-                    <p class = "mission-statement-small">MrHwang (Design, Programmer)</p>
-                    <p class = "mission-statement-small">Betty (World Builder, Joined 2022) </p>
-                    <p class = "mission-statement-small">scailman (Modeling, Part-time, Joined 2022)</p>
-                    <p class = "mission-statement-small">Dooli (Programmer, Part-Time, Joined 2025)</p>
-                    <p class = "mission-statement-small">7HC (Modeling, Part-time, Joined 2022, On Leave)</p>
-                </div>
-            </div>
-
-
-        </div>  
-    </div>
-
-    <!-- FAQ Section -->
-
-    <div class = "demo-section section-offset" id = "faq">
-        <div class="row">
-            <div class="col s6">
-                <img src="assets/main/faq.png" alt="faq" class="demo-image">
-            </div>
-       
-            <div class="col s6">
-                <h2 class="demo-title">FAQ - Frequently Asked Questions</h2>
-                <p class="demo-description">We know you may have questions about features about this game. Check out our dedicated FAQ to see the answers to some of our most Frequently Asked Questions</p>
-                <a href="faq.html" class=" btn-large demo-button"><i class="fa-solid fa-question"></i>  FAQ</a>
-            </div>
+  <!-- P3 Games Section -->
+  <div id="p3games" class="p3-games-section section-offset">
+    <div class="row">
+      <p class="p3-games-title">P3 Games</p>
+      <div class="col s6">
+        <div class="p3story">
+          <h2 class="subtitle">Our Story</h2>
+          <p class="p3-story">"Hello, I'm MrHwang from South Korea. I love driving games so much that I started to make my own game back in 2002 but failed to finish it. So I joined a game company and worked there for 14 years to learn how to make a game. And in summer 2020, I finally quit the job and start to make my dream game again." - Mr Hwang</p>
+          <p class="p3-story">MotorTown: Behind The Wheel is a passion project by P3 Games, a small indie game studio based in South Korea. Founded by MrHwang, the team is dedicated to creating an immersive driving experience that combines realistic physics with a vibrant open world.</p>
+          <p class="p3-story">With a focus on community feedback and continuous improvement, P3 Games aims to deliver a game that not only meets but exceeds player expectations.</p>
         </div>
-    </div>
-
-
-    <!--Demo Section-->
-
-    <div id = "demo" class = "demo-section section-offset">
-        <div class="row">
-            <div class="col s6 ">
-               
-                    <h2 class="demo-title">Try the MotorTown: Behind The Wheel Demo</h2>
-                    <p class="demo-description">Not sure if MotorTown is for you? Try the demo and see how it feels to get behind the wheel before you commit. The demo is available on Steam and offers a taste of the full game experience, including driving mechanics, world exploration, and more.</p>
-                    <div style="text-align: left;">
-                        <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large demo-button">
-                            <i class="fa-brands fa-steam fa-fw"></i> Try the Demo
-                        </a>
-                
-                </div>
-            </div>
-            <div class="col s6 ">
-                <img src="assets/main/demo.png" alt="Demo image" class="demo-image">
-            </div>
-            
+      </div>
+      <div class="col s6 p3team">
+        <div class="p3team">
+          <h2 class="subtitle">Current Team Members:</h2>
+          <p class="mission-statement-small">MrHwang (Design, Programmer)</p>
+          <p class="mission-statement-small">Betty (World Builder, Joined 2022)</p>
+          <p class="mission-statement-small">scailman (Modeling, Part-time, Joined 2022)</p>
+          <p class="mission-statement-small">Dooli (Programmer, Part-Time, Joined 2025)</p>
+          <p class="mission-statement-small">7HC (Modeling, Part-time, Joined 2022, On Leave)</p>
         </div>
+      </div>
     </div>
+  </div>
 
-
-    <!--Wishlist Section-->
-    <div class="wishlist-section section-offset" id = "wishlist">
-       
-            <p class="wishlist-title">Play MotorTown: Behind The Wheel on STEAM</p>
-            <p class="wishlist-subtitle">MotorTown: Behind The Wheel is available on Steam Early Access. Join the community, explore the world, and experience the thrill of driving in a dynamic environment. Your support helps us continue to improve the game and add new features. Both the Full Game and the Demo can be found through the game's Steam Page.</p>
-            <div class = "row">
-                <div class ="col s6 ">
-                    <p class="wishlist-subtitle">Try the Free Demo of  MotorTown: Behind The Wheel before purchasing the full  game to see if its right for you .</p>
-                </div>
-                <div class ="col s6">
-                    <p class = "wishlist-subtitle">Support the development of MotorTown: Behind The Wheel by purchasing a copy on Steam.</p>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large wishlist-button">
-                    <i class="fab fa-steam fa-fw"></i> Get Behind The Wheel
-                </a>
-            </div>
-        
+  <!-- FAQ Section -->
+  <div id="faq" class="demo-section section-offset">
+    <div class="row">
+      <div class="col s6">
+        <img src="assets/main/faq.png" alt="faq" class="demo-image" loading="lazy">
+      </div>
+      <div class="col s6">
+        <h2 class="demo-title">FAQ - Frequently Asked Questions</h2>
+        <p class="demo-description">We know you may have questions about features about this game. Check out our dedicated FAQ to see the answers to some of our most Frequently Asked Questions</p>
+        <a href="faq.html" class="btn-large demo-button" target="_blank" rel="noopener"><i class="fa-solid fa-question"></i> FAQ</a>
+      </div>
     </div>
-    <!-- Footer Section -->
-     <footer class="page-footer">
-          <div class="container">
-            <div class="row">
+  </div>
 
-                <div class="col s6 m6">
-                    <h5>MotorTown- Behind The Wheel</h5>
-               
-                    <p class="subtitle">P3 Games</p>
+  <!-- Demo Section -->
+  <div id="demo" class="demo-section section-offset">
+    <div class="row">
+      <div class="col s6">
+        <h2 class="demo-title">Try the MotorTown: Behind The Wheel Demo</h2>
+        <p class="demo-description">Not sure if MotorTown is for you? Try the demo and see how it feels to get behind the wheel before you commit. The demo is available on Steam and offers a taste of the full game experience, including driving mechanics, world exploration, and more.</p>
+        <div style="text-align: left;">
+          <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large demo-button" target="_blank" rel="noopener">
+            <i class="fa-brands fa-steam fa-fw"></i> Try the Demo
+          </a>
+        </div>
+      </div>
+      <div class="col s6">
+        <img src="assets/main/demo.png" alt="Demo image" class="demo-image" loading="lazy">
+      </div>
+    </div>
+  </div>
 
-                   <div class="col s3 m6">
+  <!-- Wishlist Section -->
+  <div id="wishlist" class="wishlist-section section-offset">
+    <p class="wishlist-title">Play MotorTown: Behind The Wheel on STEAM</p>
+    <p class="wishlist-subtitle">MotorTown: Behind The Wheel is available on Steam Early Access. Join the community, explore the world, and experience the thrill of driving in a dynamic environment. Your support helps us continue to improve the game and add new features. Both the Full Game and the Demo can be found through the game's Steam Page.</p>
+    <div class="row">
+      <div class="col s6">
+        <p class="wishlist-subtitle">Try the Free Demo of MotorTown: Behind The Wheel before purchasing the full game to see if it's right for you.</p>
+      </div>
+      <div class="col s6">
+        <p class="wishlist-subtitle">Support the development of MotorTown: Behind The Wheel by purchasing a copy on Steam.</p>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" class="btn-large wishlist-button" target="_blank" rel="noopener">
+        <i class="fab fa-steam fa-fw"></i> Get Behind The Wheel
+      </a>
+    </div>
+  </div>
 
-                    <ul>
-                        <li><a href="assets\presskit.zip" download="proposed_file_name" style = "color: white;">Press Kit</a></li>
-                        <li><a href="https://trello.com/b/habAtUDJ/motor-town" target="_blank" style = "color: white;">Trello Board</a></li>
-                        <li><a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" target="_blank"style = "color: white;" > Steam Page</a></li>
-                        <li><a href="#banner" style = "color: white;">Home</a></li>
-                        <li><a href="#0.7.15" style = "color: white;">0.7.15</a></li>
-                        <li><a href="#features" style = "color: white";>Features</a></li>
-                    </ul>
-                    </div>  
-                    <div class="col s3 m6">
-                        <ul>
-                        
-                        <li><a href="#Community" style = "color: white";>Community Hub</a></li>
-                        <li><a href="#p3games" style = "color: white";>P3 Games</a></li>
-                        <li><a href="#faq" style = "color: white;">FAQ</a></li>
-                        <li><a href="#demo" style = "color: white;">Try Demo</a></li>
-                        <li><a href="#wishlist" style = "color: white;">Play MotorTown</a></li>
-                        <li><a href="https://motortown.info/" style = "color: white;">Unoffical Wiki</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col s6 m6">
-                    <img src="assets/main/Logo.png" alt="MotorTown Logo" class="footer-logo">
-                </div>
-              
-            </div>
+  <!-- Footer Section -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m6">
+          <h5>MotorTown- Behind The Wheel</h5>
+          <p class="subtitle">P3 Games</p>
+          <div class="col s3 m6">
+            <ul>
+              <li><a href="assets/presskit.zip" download style="color: white;">Press Kit</a></li>
+              <li><a href="https://trello.com/b/habAtUDJ/motor-town" target="_blank" style="color: white;">Trello Board</a></li>
+              <li><a href="https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/" target="_blank" style="color: white;">Steam Page</a></li>
+              <li><a href="#banner" style="color: white;">Home</a></li>
+              <li><a href="#v0715" style="color: white;">0.7.15</a></li>
+              <li><a href="#features" style="color: white;">Features</a></li>
+            </ul>
           </div>
-         
-        </footer>
-            
-    <!-- Scripts -->
-  <!-- Scripts (only very minimal scripts in head; prefer at end of body) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="main.js"></script>
+          <div class="col s3 m6">
+            <ul>
+              <li><a href="#Community" style="color: white;">Community Hub</a></li>
+              <li><a href="#p3games" style="color: white;">P3 Games</a></li>
+              <li><a href="#faq" style="color: white;">FAQ</a></li>
+              <li><a href="#demo" style="color: white;">Try Demo</a></li>
+              <li><a href="#wishlist" style="color: white;">Play MotorTown</a></li>
+              <li><a href="https://motortown.info/" style="color: white;">Unofficial Wiki</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s6 m6">
+          <img src="assets/main/Logo.png" alt="MotorTown Logo" class="footer-logo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Scripts (defer for speed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
