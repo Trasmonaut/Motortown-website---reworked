@@ -24,5 +24,5 @@ thing that needs to be changed between versions / closed test, to keep the websi
 I also included some new promo images in the assets -> 0.7.14 directory. All opinions and thoughts greatly appreciated. Yours respectfully, Tras (GitHub name Trasmoanut)
 
 ***
-New Website GitHub Repository Link
-https://github.com/Trasmonaut/Motortown-website---reworked
+Temporary Website link
+https://trasmonaut.github.io/Motortown-website---reworked/
