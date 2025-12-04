@@ -104,7 +104,7 @@ nav {
 
 .main-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     text-shadow: #cccccc;
@@ -555,12 +555,7 @@ height: 45vh;
   }
 
   /* Banner Section */
-  .banner .main-title {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
-    text-align: center;
-    line-height: 1.2;
-  }
+  
   
   .banner .subtitle {
     font-size: 1rem;
@@ -605,10 +600,10 @@ height: 45vh;
     transform: none !important;
   }
   .demo-button {
-    .demo-button {
     display: block !important;
-    width: 100% !important;
-    margin: 12px 0 8px 0 !important;
+
+    width: 90% !important;
+    margin: 0 auto !important;
     text-align: center !important;
     transform: none !important;
     visibility: visible !important;
